@@ -1,10 +1,13 @@
-import { Avatar, Button, Stack, Typography } from '@mui/material'
+import { Avatar, Button, Stack, Typography, useMediaQuery } from '@mui/material'
 import React from 'react'
 
 const Input = () => {
+    const _700 = useMediaQuery("(min-width:700px)");
     return (
+        
         <>
-            <Stack flexDirection={'row'}
+        {
+            _700 ? <Stack flexDirection={'row'}
                 alignItems={'center'}
                 width={'70%'}
                 height={28}
@@ -26,8 +29,11 @@ const Input = () => {
                         cursor:'pointer'
                     }
                 }}>POST</Button>
-            </Stack>
-        </>
+            </Stack> : null
+        }
+            
+            
+        </>  
     )
 }
 

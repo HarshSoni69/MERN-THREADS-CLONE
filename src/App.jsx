@@ -16,12 +16,14 @@ import Replies from './pages/protected/profile/Replies';
 import SinglePost from './pages/protected/SinglePost'
 
 const App = () => {
+  const data = true;
   return (
     <>
        <Box minHeight={'100vh'}>
         <BrowserRouter>
           <Routes>
-            <Route exact path='/' element={<ProtectedLayout/>}>
+            {
+              data ?  <Route exact path='/' element={<ProtectedLayout/>}>
               <Route exact path='' element={<Home/>}/>
               <Route exact path='post/:id' element={<SinglePost/>}/>
               <Route exact path='search' element={<Search/>}/>
@@ -30,8 +32,14 @@ const App = () => {
                 <Route exact path='replies/:id' element={<Replies/>}/>
                 <Route exact path='reposts/:id' element={<Repost/>}/>
               </Route>
-              <Route exact path='/register' element={<Register/>}/>
+              
             </Route>
+            : 
+            <Route exact path='/' element={<Register/>}/>
+            }
+            <Route exact path='*' element={<ErrorPage/>}/>
+           
+            
           </Routes>
         </BrowserRouter>
        </Box>

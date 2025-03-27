@@ -1,7 +1,9 @@
 import React from "react";
 import { Button, Stack, Typography } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 
 const ErrorPage = () => {
+  const navigate = useNavigate();
   return (
     <Stack
       width="100%"
@@ -32,7 +34,8 @@ const ErrorPage = () => {
         ":hover":{
           bgcolor:"green",
           cursor:"pointer"
-        }}}>
+        }}}
+        onClick={()=>{navigate(-1)}}>
          Go Back
         </Button>
       </Stack>
