@@ -24,3 +24,10 @@
 .file-input {
     display: none;
   }
+  #url-img{
+    margin: 0 0 10;
+  }
+  .link{
+    text-decoration: none;
+    color: black;
+  }

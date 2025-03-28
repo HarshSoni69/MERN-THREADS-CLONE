@@ -14,7 +14,7 @@ const PostTwo = () => {
       <Stack flexDirection={'column'} gap={2}>
         <Stack flexDirection={'column'}>
         <Typography variant='h6' fontSize={_300 ? '1rem' : '0.8rem'} fontWeight={'bold'}>Harsh Soni</Typography>
-        <Link  to={'/post/1'}>
+        <Link  to={'/post/1'} className='link'>
         <Typography variant='h5' fontSize={_700 ? '1.2rem' :_400 ? '1rem':_300 ? '0.9rem' :'0.8rem'} >Hi guyz i made this project please like and comment on this post
         </Typography>
         </Link>
